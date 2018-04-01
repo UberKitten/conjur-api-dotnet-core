@@ -7,6 +7,7 @@ For instruction on use, see the original repo.
 ## License
 
 Copyright 2016-2017 CyberArk
+
 Copyright 2018 Astra West
 
 Licensed under the Apache License, Version 2.0 (the "License");
