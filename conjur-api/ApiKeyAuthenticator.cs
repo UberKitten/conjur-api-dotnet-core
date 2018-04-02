@@ -68,7 +68,7 @@ namespace Conjur
 
         #endregion
 
-        internal void StartTokenTimer(TimeSpan timeout)
+        public void StartTokenTimer(TimeSpan timeout)
         {
             this.timer.Change(timeout, Timeout.InfiniteTimeSpan);
         }

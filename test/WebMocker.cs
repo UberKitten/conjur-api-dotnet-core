@@ -201,7 +201,10 @@ namespace Conjur.Test
 
                 public WebConnectionData()
                 {
-                    this.data = Activator.CreateInstance("System", "System.Net.WebConnectionData").Unwrap();
+                    // .NET Core's Activator does not have the string, string method
+                    // We have to have a Type variable
+                    var type = Assembly.GetExecutingAssembly().GetType("System.Net.WebConnectionData");
+                    this.data = Activator.CreateInstance(type);
                     this.type = this.data.GetType();
                     Set("Headers", new WebHeaderCollection());
                 }

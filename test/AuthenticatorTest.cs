@@ -84,6 +84,7 @@ namespace Conjur.Test
 
         protected void MockTokenExpiration()
         {
+            // had to change to public, odd
             Authenticator.StartTokenTimer(new TimeSpan(0, 0, 0, 0, 1));
             Thread.Sleep(10);
         }
